@@ -15,6 +15,7 @@
                 var text = data[j].OkulAdi;
                 var okulid = data[j].OkulID;
                 var dersyiliid = data[j].DersYiliID;
+                alert(dersyiliid);
                 rolid = data[j].RolID;
 
                 $('#selectNumber').append("<option  value=" + rolid + ">" + text + "</option>");
@@ -23,6 +24,8 @@
             $("#selectNumber").on('change', function () {
                 localStorage.setItem("RolID", this.value[0]);
                 localStorage.setItem("OkulID", okulid);
+                localStorage.setItem("dyiliid", dersyiliid);
+                alert(dersyiliid);
                 // alert(dersyiliid);
             });
         }

@@ -41,12 +41,13 @@
             for (var j = 0; j < data.length; j++) {
                 var text = data[j].Aciklama;
                 var sinifid = data[j].SinifID;
+               // alert(sinifid);
                 $('#selectNumber').append("<option value=" + sinifid + ">" + text + "</option>");
             }
             $("#selectNumber").on('change', function () {
-                alert($(this).val());
+               // alert($(this).val());
                 var x = document.getElementById("myDate").value;
-                alert(x);
+               // alert(x);
                 if (x === "") {
                     alert("Lütfen Tarih Seçiniz !!")
 
@@ -100,4 +101,5 @@
         }
     });
 };
+
 

@@ -24,7 +24,8 @@
             $("#selectNumber").on('change', function () {
                 localStorage.setItem("RolID", this.value[0]);
                 localStorage.setItem("OkulID", okulid);
-                // alert(dersyiliid);
+                localStorage.setItem("dyiliid", dersyiliid);
+                alert(dersyiliid);
                 window.location.href = "index2.html";
             });
         }
