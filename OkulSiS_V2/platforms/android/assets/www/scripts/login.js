@@ -43,7 +43,10 @@ $(document).ready(function () {
                     document.getElementsByTagName("P")[0].innerHTML = gelen;
                     // jQuery.load("index2.html",gelen)
                     //localStorage.clear();
-                    localStorage.setItem("gelenid", kisiid, "KullaniciAdi", gelen, "OkulID", okulid);
+                    localStorage.setItem("KullaniciAdi", gelen)
+                    localStorage.setItem("gelenid", kisiid, "OkulID", okulid);
+                    var add = localStorage.getItem("KullaniciAdi");
+                   
                     //  alert()
                     window.location.href = "../selectSchool.html";
                     // return id;
