@@ -27,9 +27,9 @@
             }
         }
     })
-   
+
     $.ajax({
-        
+
         url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=' + kisiid + '&OkulID=' + okulid + '&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97',
         type: 'GET',
         dataType: 'json',
@@ -41,13 +41,13 @@
             for (var j = 0; j < data.length; j++) {
                 var text = data[j].Aciklama;
                 var sinifid = data[j].SinifID;
-               // alert(sinifid);
+                // alert(sinifid);
                 $('#selectNumber').append("<option value=" + sinifid + ">" + text + "</option>");
             }
             $("#selectNumber").on('change', function () {
-               // alert($(this).val());
+                // alert($(this).val());
                 var x = document.getElementById("myDate").value;
-               // alert(x);
+                // alert(x);
                 if (x === "") {
                     alert("Lütfen Tarih Seçiniz !!")
 
