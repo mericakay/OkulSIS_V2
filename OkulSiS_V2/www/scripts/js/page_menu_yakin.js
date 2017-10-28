@@ -51,10 +51,7 @@
                     type: 'GET',
                     dataType: 'json',
                     success: function (data) {
-                        if (data == []) {
-                        alert("Ögrencinin Devamsızlığı Bulunmamaktadır..!")
-                        }
-                        else {
+                       
 
                       
                         var j;
@@ -67,7 +64,7 @@
                             $('#location').append('<tr><td>' + text + '</td><td>' + value + '</td><td>' + kod + '</td></tr>');
                         }
                         }
-                    }
+                    
                 });
             });
         }

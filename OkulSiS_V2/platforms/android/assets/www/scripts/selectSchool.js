@@ -25,7 +25,7 @@
                 localStorage.setItem("RolID", this.value[0]);
                 localStorage.setItem("OkulID", okulid);
                 localStorage.setItem("dyiliid", dersyiliid);
-                alert(dersyiliid);
+                //alert(dersyiliid);
                 window.location.href = "index2.html";
             });
         }
