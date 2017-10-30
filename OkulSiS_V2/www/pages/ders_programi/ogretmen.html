@@ -26,7 +26,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-    <script src="../../scripts/js/odev/page_odev_ogrenci.js"></script>
+    <script src="../../scripts/js/page_menu_ogretmen.js"></script>
+    <script src="../../scripts/js/insert_devamsizlik.js"></script>
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -281,16 +282,23 @@
             <!-- Main content -->
             <section class="content">
                 <!-- Info boxes -->
-                
-                    <table class="table table-bordered" id="location" border='1'>
+              
+                    <h3 class="box-title">Tarih Seçiniz</h3>
+                    <input type="date" id="myDate" value="Tarih Seçiniz !" /><br />
+                    <h5>Şube</h5>
+                    <select class="content-header" id="selectNumber"> </select><br />
+                    <h5>Ders Saati</h5>
+                    <select class="content-header" id="sube"></select><br />
+                    <h5>Öğrenci  Seçiniz</h5>
+                    <table class="table table-bordered" id="location" >
                         <tr>
-                            <th>Öğretmen Adı</th>
-                            <th>Ders Adı </th>
-                            <th>Tanımı</th>
-                            <th>Teslim Tarihi</th>
+                            <th width="10px;">NO</th>
+                            <th>Adı/Soyadı</th>
+                            <th>Devamsızlık Durumu</th>
                         </tr>
-                    </table>  
-                
+                    </table>
+                <input type="button"  id="submit" name="OK" class="ok" value="Kaydet" />
+           
             </section>
             <!-- /.content -->
         </div>
