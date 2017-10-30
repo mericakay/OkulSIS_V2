@@ -26,8 +26,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-    <script src="../../scripts/js/page_menu_yakin.js"></script>
-    <script src="../../scripts/js/insert_devamsizlik.js"></script>
+    <script src="../../scripts/js/ders_programi/page_ders_programi_yakini.js"></script>
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -284,11 +283,17 @@
                 <!-- Info boxes -->
                 <h5>Ögrenci Seç</h5>
                 <select id="selectNumber"> </select><br />
-                <table id="location" border='1'>
+                <h5>Dönem Seçiniz</h5>
+                <select class="content-header" id="sube">
+                    <option>1. Dönem</option>
+                    <option>2. Dönem</option>
+                </select><br />
+
+                <table class="table table-bordered" id="location">
                     <tr>
-                        <th>Tarih</th>
-                        <th>Gün </th>
-                        <th>Devamsızlık Durumu</th>
+                        <th width="10px;">Ders Adı</th>
+                        <th>Sınıf</th>
+                        <th>Ders Başlangıç Bitiş </th>
                     </tr>
                 </table>
 
