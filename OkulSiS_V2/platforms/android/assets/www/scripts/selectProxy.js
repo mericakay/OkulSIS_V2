@@ -31,7 +31,7 @@
               //  localStorage.setItem("logo",schoolLogo);
 
                 window.location.href = "login.html";
-                // alert(dersyiliid);
+                
             });
         }
 

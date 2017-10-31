@@ -6,9 +6,11 @@
     var ip = localStorage.getItem("proxy");
     var kisiadi = localStorage.getItem("KullaniciAdi");
     document.getElementById("username_mrc").innerHTML = kisiadi;
+    var cid = localStorage.getItem("cid");
+    var dbn = localStorage.getItem("dbn");
     // Menu AJAX Başlangıç 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -29,7 +31,7 @@
     })
     // Menu AJAX Bitiş 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kurumyoneticisisubelistesi_mbllogin&dersYiliID='+did+'',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kurumyoneticisisubelistesi_mbllogin&dersYiliID=' + did + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -45,7 +47,7 @@
             }
             $("#selectNumber").on('change', function () {            
                     $.ajax({
-                        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID=' + this.value + '',
+                        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID=' + this.value + '&cid=' + cid + '&dbn=' + dbn + '',
                         type: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -63,7 +65,7 @@
                             $("#sube").on('change', function () {
                                 $.ajax({
 
-                                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=KySubeOgrenciDersListesi_mbllogin&ogrenciSeviyeID=' + this.value + '',
+                                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=KySubeOgrenciDersListesi_mbllogin&ogrenciSeviyeID=' + this.value + '&cid=' + cid + '&dbn=' + dbn + '',
                                     type: 'GET',
                                     dataType: 'json',
                                     success: function (data) {

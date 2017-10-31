@@ -6,9 +6,11 @@
     var ip = localStorage.getItem("proxy");
     var kisiadi = localStorage.getItem("KullaniciAdi");
     document.getElementById("username_mrc").innerHTML = kisiadi;
+    var cid = localStorage.getItem("cid");
+    var dbn = localStorage.getItem("dbn");
 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -30,7 +32,7 @@
 
     $.ajax({
 
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=OgretmenDersProgramiListesi_mbllogin&ogretmenID='+kisiid+'&dersYiliID='+did+'&donemID=1',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=OgretmenDersProgramiListesi_mbllogin&ogretmenID=' + kisiid + '&dersYiliID=' + did + '&donemID=1&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {

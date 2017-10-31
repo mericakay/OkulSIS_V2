@@ -6,9 +6,11 @@
     var ip = localStorage.getItem("proxy");
     var kisiadi = localStorage.getItem("KullaniciAdi");
     document.getElementById("username_mrc").innerHTML = kisiadi;
+    var cid = localStorage.getItem("cid");
+    var dbn = localStorage.getItem("dbn");
 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -30,7 +32,7 @@
 
     $.ajax({
 
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=' + kisiid + '&OkulID=' + okulid + '&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=' + kisiid + '&OkulID=' + okulid + '&dersYiliID=' + did + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -56,7 +58,7 @@
 
 
                     $.ajax({
-                        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId=1250E188-B635-4418-ABB4-98E8886C707D&sinifID=' + this.value + '&tarih=' + x + '',
+                        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId='+kisiid+'&sinifID=' + this.value + '&tarih=' + x + '&cid=' + cid + '&dbn=' + dbn + '',
                         type: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -74,7 +76,7 @@
                             $("#sube").on('change', function () {
                                 $.ajax({
 
-                                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID=F4201B97-B073-4DD7-8891-8091C3DC82CF&tarih=2017-01-02+00%3A00%3A00&dersSirasi=1&dersYiliID=fc4675fc-dafb-4af6-a3c2-7acd22622039&kisiId=1250E188-B635-4418-ABB4-98E8886C707D',
+                                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID='+this.value+'F&tarih=2017-01-02+00%3A00%3A00&dersSirasi=1&dersYiliID='+did+'&kisiId='+kisiid+'&cid=' + cid + '&dbn=' + dbn + '',
                                     type: 'GET',
                                     dataType: 'json',
                                     success: function (data) {

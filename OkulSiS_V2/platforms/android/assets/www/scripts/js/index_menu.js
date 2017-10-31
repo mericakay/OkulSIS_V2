@@ -1,9 +1,11 @@
 ﻿var did = localStorage.getItem("dyiliid");
 var rolid = localStorage.getItem("RolID");
 var ip = localStorage.getItem("proxy");
+var cid = localStorage.getItem("cid");
+var dbn = localStorage.getItem("dbn");
 $.ajax({
     
-    url: 'http://'+ip+':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '',
+    url: 'http://'+ip+':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid='+cid+'&dbn='+dbn+'',
     type: 'GET',
     dataType: 'json',
     success: function (data) {

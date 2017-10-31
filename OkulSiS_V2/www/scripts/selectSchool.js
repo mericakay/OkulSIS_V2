@@ -34,8 +34,7 @@
                 localStorage.setItem("dyiliid", dersyiliid);
                 var dbn = localStorage.getItem("dbn");
                 var rolid = localStorage.getItem("RolID");
-              //  alert( rolid);
-               window.location.href = "index2.html";
+                window.location.href = "index2.html";
             });
         }
 

@@ -3,10 +3,12 @@
     var okulid = localStorage.getItem("OkulID");
     var kisiid = localStorage.getItem("gelenid");
     var dersyiliid = localStorage.getItem("dyiliid");
-    alert(dersyiliid);
+    var cid = localStorage.getItem("cid");
+    var dbn = localStorage.getItem("dbn");
+ 
     $.ajax({
      
-        url: ' http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kurumyoneticisisubelistesi_mbllogin&dersYiliID=' + dersyiliid + '',
+        url: ' http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kurumyoneticisisubelistesi_mbllogin&dersYiliID=' + dersyiliid + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -29,7 +31,7 @@
                 }     
                 else {
                     $.ajax({
-                        url: ' http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID='+sinifid+'',
+                        url: ' http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID=' + sinifid + '&cid=' + cid + '&dbn=' + dbn + '',
                         type: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -47,7 +49,7 @@
                             $("#sube").on('change', function () {
                                 $.ajax({
 
-                                    url: 'http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=KySubeOgrenciDersListesi_mbllogin&ogrenciSeviyeID=' + seviyeid + '',
+                                    url: 'http://192.168.2.60:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=KySubeOgrenciDersListesi_mbllogin&ogrenciSeviyeID=' + seviyeid + '&cid=' + cid + '&dbn=' + dbn + '',
                                     type: 'GET',
                                     dataType: 'json',
                                     success: function (data) {
