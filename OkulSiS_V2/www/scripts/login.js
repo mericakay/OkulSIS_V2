@@ -43,7 +43,8 @@ $(document).ready(function () {
                     document.getElementsByTagName("P")[0].innerHTML = gelen;
                     // jQuery.load("index2.html",gelen)
                     //localStorage.clear();
-                    localStorage.setItem("KullaniciAdi", gelen)
+                    localStorage.setItem("tc", username);
+                    localStorage.setItem("KullaniciAdi", gelen);
                     localStorage.setItem("gelenid", kisiid, "OkulID", okulid);
                     var add = localStorage.getItem("KullaniciAdi");
                    

@@ -15,16 +15,21 @@
                 var proxy = data[j].proxy;
                 var schoolLogo = data[j].logo;
                 var combologo = data[j].combologo;
+                var cid = data[j].id;
+           
                
                 
-                $('#selectNumber').append("<option background=" + combologo + " value=" + proxy + " >" + text + "</option>");
+                $('#selectNumber').append("<option id="+cid+" background=" + combologo + " value=" + proxy + " >" + text + "</option>");
             }
             $("#selectNumber").on('change', function () {
-              
+               
+              //  alert($(this).find('option:selected').attr('id'));
+                localStorage.setItem("cid", $(this).find('option:selected').attr('id'));
                 var ip = $(this).val();
               
                 localStorage.setItem("proxy", ip);
               //  localStorage.setItem("logo",schoolLogo);
+
                 window.location.href = "login.html";
                 // alert(dersyiliid);
             });
