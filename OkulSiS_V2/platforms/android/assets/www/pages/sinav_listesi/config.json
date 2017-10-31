@@ -1,0 +1,258 @@
+{
+	"map": {
+		"projection": "EPSG:900913",
+		"units": "m",
+		"center": {"x": 1250000.000000, "y": 5370000.000000, "crs": "EPSG:900913"},
+    "zoom":5,
+		"maxExtent": [
+			-20037508.34, -20037508.34,
+			20037508.34, 20037508.34
+		],
+		"layers": [
+			{
+				"type": "osm",
+				"title": "Open Street Map",
+				"name": "mapnik",
+        "source": "osm",
+				"group": "background",
+        "visibility": true
+			},
+      {
+        "type": "google",
+        "title": "Google HYBRID",
+        "name": "HYBRID",
+        "source": "google",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "mapquest",
+        "title": "MapQuest OSM",
+        "name": "osm",
+        "source": "mapquest",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "bing",
+        "title": "Bing Aerial",
+        "apiKey": "AqTGBsziZHIJYYxgivLBf0hVdrAk9mWO5cQcb8Yux8sW5M8c8opEC2lZqKR1ZZXf",
+        "name": "Aerial",
+        "source": "bing",
+        "group": "background",
+        "visibility": false
+      },
+      {
+        "type": "tileprovider",
+        "title": "NASAGIBS Night 2012",
+        "provider": "NASAGIBS.ViirsEarthAtNight2012",
+        "name": "Night2012",
+        "source": "nasagibs",
+        "group": "background",
+        "visibility": false
+      },
+      {
+				"type": "wms",
+        "url":"http://www.realvista.it/reflector/open/service",
+        "visibility": false,
+				"title": "e-Geos Ortofoto RealVista 1.0",
+				"name": "rv1",
+				"group": "background",
+				"format": "image/jpeg"
+			},
+      {
+				"type": "wms",
+        "url":"https://demo.geo-solutions.it/geoserver/wms",
+        "visibility": false,
+				"title": "Natural Earth",
+				"name": "sde:NE2_HR_LC_SR_W_DR",
+				"group": "background",
+				"format": "image/png"
+			},
+      {
+				"type": "wms",
+        "url":"https://demo.geo-solutions.it/geoserver/wms",
+        "visibility": false,
+				"title": "Hypsometric",
+				"name": "sde:HYP_HR_SR_OB_DR",
+				"group": "background",
+				"format": "image/png"
+			},
+			{
+				"type": "wms",
+        "url":"https://demo.geo-solutions.it/geoserver/wms",
+        "visibility": false,
+				"title": "Gray Earth",
+				"name": "sde:GRAY_HR_SR_OB_DR",
+				"group": "background",
+				"format": "image/png"
+			},
+      {
+				"type": "wms",
+        "url":"https://demo.geo-solutions.it/geoserver/wms",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Weather data",
+				"name": "nurc:Arc_Sample",
+				"group": "Hava durumu",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": -25.6640625, "miny": 26.194876675795218, "maxx": 48.1640625, "maxy": 56.80087831233043},
+          "crs": "EPSG:4326"
+        }
+			},
+			
+      {
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": true,
+        "opacity": 1,
+				"title": "Geçekleşmiş Olaylar",
+				"name": "cite:temp_gis_gerceklesmis_olaylar_point",
+				"group": "Spatial Analiz",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": true,
+        "opacity": 1,
+				"title": "Olabilecek Olaylar Analizi",
+				"name": "cite:temp_gis_boroughs",
+				"group": "Spatial Analiz",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": true,
+        "opacity": 1,
+				"title": "İstikbarat",
+				"name": "cite:temp_gis_istihbarat",
+				"group": "Spatial Analiz",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+
+			
+		{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Yapılar",
+				"name": "cite:yapilar",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Yollar",
+				"name": "cite:yollar",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Önemli Yapılar",
+				"name": "cite:ana_noktalar",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": true,
+        "opacity": 1,
+				"title": "İller",
+				"name": "cite:gis_city",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "İlçeler",
+				"name": "cite:gis_boroughs",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Köyler",
+				"name": "cite:gis_village",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": 25, "miny": 35, "maxx": 44, "maxy": 42},
+          "crs": "EPSG:4326"
+        }   
+			},
+			{
+				"type": "wms",
+        "url":"http://78.187.120.6:92/geoserver/cite/wms?",
+        "visibility": false,
+        "opacity": 1,
+				"title": "Dünya",
+				"name": "cite:gis_world",
+				"group": "Sabit Katmanlar",
+				"format": "image/png",
+        "bbox": {
+          "bounds": {"minx": -181.800003051758, "miny":  -90.7678756713867, "maxx": 181.800003051758 , "maxy":  84.542610168457},
+          "crs": "EPSG:4326"
+        }   
+			},
+      {
+        "type": "tileprovider",
+        "title": "OpenTopoMap",
+        "provider": "OpenTopoMap",
+        "name": "OpenTopoMap",
+        "source": "OpenTopoMap",
+        "group": "background",
+        "visibility": false
+      }
+		]
+	}
+}
