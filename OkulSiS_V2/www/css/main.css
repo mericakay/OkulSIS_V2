@@ -282,8 +282,12 @@ div.button {
 
         th {
             background-color: #4CAF50;
-            color: white;
+            color: black;
         }
+        .selected {
+    background-color: brown;
+    color: #FFF;
+}
         #headmRc{
              background-color: #4b75a5;
              color: white;

@@ -90,7 +90,7 @@
                                             var SoyAdi = data[j].Soyadi;
                                             var Tc = data[j].TCKimlikNo;
                                             var selected = data[j].selected;
-                                            $('#location').append('<tr><td>' + Numarasi + '</td><td>' + Adi + '</td><td><input type="checkbox"  id="option" name="check" / ><label for="option" sytle=" margin-right:20px;">Yok</label><input type="checkbox"  id="option" name="check"/ ><label for="option" sytle="font-size: 11px;">Geç</label></td></tr>');
+                                            $('#location').append('<tr><td  onclick="myFunction()">' + Numarasi + '</td><td>' + Adi + '</td><td><input type="checkbox"  id="option" name="check" / ><label for="option" sytle=" margin-right:20px;">Yok</label><input type="checkbox"  id="option" name="check"/ ><label for="option" sytle="font-size: 11px;">Geç</label></td></tr>');
                                         }
 
                                     }

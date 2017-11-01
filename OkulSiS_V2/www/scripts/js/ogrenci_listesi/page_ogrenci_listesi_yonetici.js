@@ -10,7 +10,7 @@
     var dbn = localStorage.getItem("dbn");
 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid='+cid+'&dbn='+dbn+'',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=mobilMenu_mbllogin&RolID=' + rolid + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -31,7 +31,7 @@
     })
 
     $.ajax({
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId='+kisiid+'&sinifID=' + this.value + '&tarih=' + x + '&cid='+cid+'&dbn='+dbn+'',
+        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId=' + kisiid + '&sinifID=' + this.value + '&tarih=' + x + '&cid=' + cid + '&dbn=' + dbn + '',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -50,7 +50,7 @@
             $("#sube").on('change', function () {
                 $.ajax({
 
-                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID='+sinifid+'&cid='+cid+'&dbn='+dbn+'',
+                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=Kysubeogrencilistesi_mbllogin&sinifID=' + sinifid + '&cid=' + cid + '&dbn=' + dbn + '',
                     type: 'GET',
                     dataType: 'json',
                     success: function (data) {
@@ -66,7 +66,7 @@
                             var numarasi = data[j].Numarasi;
 
                             $('#location').append('<tr><td>' + adi + '</td><td>' + soyadi + '</td><td>' + tc + '</td><td>' + aciklama + '</td><td>' + numarasi + '</td></tr>');
-            
+
                         }
 
                     }
@@ -76,3 +76,4 @@
     });
 
 
+}

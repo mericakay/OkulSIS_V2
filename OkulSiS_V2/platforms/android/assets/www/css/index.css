@@ -5,7 +5,10 @@
 html {
     background-color: #E4E4E4;
 }
-
+.selected {
+    background-color: brown;
+    color: #FFF;
+}
 body {
     height: 100%;
     -webkit-touch-callout: none;
