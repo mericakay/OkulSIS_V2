@@ -32,7 +32,7 @@
 
     $.ajax({
 
-        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=' + kisiid + '&OkulID=' + okulid + '&dersYiliID=' + did + '&cid=' + cid + '&dbn=' + dbn + '',
+        url: 'http://192.168.1.26:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId=17A68CAA-1A13-460A-BEAA-FB483AC82F7B&sinifID=F4201B97-B073-4DD7-8891-8091C3DC82CF&tarih=2016-09-19+00%3A00%3A00&dbn=Bilsanet1&cid=3',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -58,7 +58,7 @@
 
 
                     $.ajax({
-                        url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgramiDersSaatleri_mbllogin&kisiId='+kisiid+'&sinifID=' + this.value + '&tarih=' + x + '&cid=' + cid + '&dbn=' + dbn + '',
+                        url: 'http://192.168.1.26/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=17A68CAA-1A13-460A-BEAA-FB483AC82F7B&OkulID=7E755C68-ABC1-492B-9D82-3B39B831A962&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&dbn=Bilsanet1&cid=3',
                         type: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -76,7 +76,7 @@
                             $("#sube").on('change', function () {
                                 $.ajax({
 
-                                    url: 'http://' + ip + ':8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID='+this.value+'F&tarih=2017-01-02+00%3A00%3A00&dersSirasi=1&dersYiliID='+did+'&kisiId='+kisiid+'&cid=' + cid + '&dbn=' + dbn + '',
+                                    url: 'http://192.168.1.26/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID=F4201B97-B073-4DD7-8891-8091C3DC82CF&tarih=2016-09-19+00%3A00%3A00&dersSirasi=1&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&kisiId=1250E188-B635-4418-ABB4-98E8886C707D&dbn=Bilsanet1&cid=3',
                                     type: 'GET',
                                     dataType: 'json',
                                     success: function (data) {
@@ -90,7 +90,8 @@
                                             var SoyAdi = data[j].Soyadi;
                                             var Tc = data[j].TCKimlikNo;
                                             var selected = data[j].selected;
-                                            $('#location').append('<tr><td>' + Numarasi + '</td><td>' + Adi + '</td><td><input type="checkbox"  id="option" name="check" / ><label for="option" sytle=" margin-right:20px;">Yok</label><input type="checkbox"  id="option" name="check"/ ><label for="option" sytle="font-size: 11px;">Geç</label></td></tr>');
+                                            var oid = data[j].OgrenciID;
+                                            $('#location').append('<tr><td  onclick="myFunction()">' + Numarasi + '</td><td>' + Adi + '</td><td><input type="checkbox"  id="option" name="check" / ><label for="option" sytle=" margin-right:20px;">Yok</label><input type="checkbox"  id="option" name="check"/ ><label for="option" sytle="font-size: 11px;">Geç</label></td><td style="visibility:hidden;">' + oid + '</td></tr>');
                                         }
 
                                     }
@@ -104,4 +105,30 @@
     });
 };
 
+function myFunction() {
+    //   document.getElementById("demo").innerHTML = "Hello World";
+    var table = document.getElementById("location");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+        var currentRow = table.rows[i];
+        var createClickHandler =
+            function (row) {
+                return function () {
+                    var rows = $("#location>tr");
+                   // alert(JSON.stringify(rows, null, 4));
+                    console.log(JSON.stringify(rows, null, 4));
+                    var cell = row.getElementsByTagName("td")[3];
+                    var devamsız = row.getElementsByTagName("td")[1];
+                    var id = cell.innerHTML;
+                    var gelen = devamsız.innerHTML;
+                   // alert("<OgrenciID>" + id + "</OgrenciID>" + "<DevamsizlikKodID>" + gelen + "</DevamsizlikKodID>");
+                };
+            };
 
+        currentRow.onclick = createClickHandler(currentRow);
+    }
+
+
+
+
+}
