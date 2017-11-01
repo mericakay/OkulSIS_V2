@@ -58,7 +58,7 @@
 
 
                     $.ajax({
-                        url: 'http://192.168.1.26/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=17A68CAA-1A13-460A-BEAA-FB483AC82F7B&OkulID=7E755C68-ABC1-492B-9D82-3B39B831A962&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&dbn=Bilsanet1&cid=3',
+                        url: 'http://192.168.1.26:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersProgrami_mbllogin&kisiId=17A68CAA-1A13-460A-BEAA-FB483AC82F7B&OkulID=7E755C68-ABC1-492B-9D82-3B39B831A962&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&dbn=Bilsanet1&cid=3',
                         type: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -76,7 +76,7 @@
                             $("#sube").on('change', function () {
                                 $.ajax({
 
-                                    url: 'http://192.168.1.26/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID=F4201B97-B073-4DD7-8891-8091C3DC82CF&tarih=2016-09-19+00%3A00%3A00&dersSirasi=1&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&kisiId=1250E188-B635-4418-ABB4-98E8886C707D&dbn=Bilsanet1&cid=3',
+                                    url: 'http://192.168.1.26:8080/Slim_Proxy_okulsis/SlimProxyBoot.php?url=ogretmenDersPrgDersSaatleriOgrencileri_mbllogin&sinifID=F4201B97-B073-4DD7-8891-8091C3DC82CF&tarih=2016-09-19+00%3A00%3A00&dersSirasi=1&dersYiliID=9D7A115C-5E96-4F6E-B31D-E5710BDA1C97&kisiId=1250E188-B635-4418-ABB4-98E8886C707D&dbn=Bilsanet1&cid=3',
                                     type: 'GET',
                                     dataType: 'json',
                                     success: function (data) {
