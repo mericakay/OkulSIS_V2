@@ -46,11 +46,39 @@
                 var konu = data[j].Konu;
                 var mesaj = data[j].Mesaj;
                 var selected = data[j].selected;
-                $('#location').append('<tr><td>' + Adi + '</td><td>' + konu + '</td><td>' + mesaj + '</td><td>' + tarih + '</td></tr>');
+                $('#location').append('<tr><td  onclick="myFunction()">' + Adi + '</td><td>' + konu + '</td><td>' + tarih + '</td><td style="visibility:hidden;">' + mesaj + '</td></tr>');
             }
 
         }
     });;
 };
+
+
+function myFunction() {
+    //   document.getElementById("demo").innerHTML = "Hello World";
+    var table = document.getElementById("location");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+        var currentRow = table.rows[i];
+        var createClickHandler =
+            function (row) {
+                return function () {
+                    var rows = $("#location>tr");
+                    // alert(JSON.stringify(rows, null, 4));
+                    console.log(JSON.stringify(rows, null, 4));
+                    var cell = row.getElementsByTagName("td")[3];
+                    var devamsız = row.getElementsByTagName("td")[1];
+                    var id = cell.innerHTML;
+                    var gelen = devamsız.innerHTML;
+                    alert(id);
+                    // alert("<OgrenciID>" + id + "</OgrenciID>" + "<DevamsizlikKodID>" + gelen + "</DevamsizlikKodID>");
+                };
+            };
+
+        currentRow.onclick = createClickHandler(currentRow);
+    }
+
+
+}
 
 
