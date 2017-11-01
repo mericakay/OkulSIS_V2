@@ -26,8 +26,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-    <script src="../../scripts/js/page_menu_yakin.js"></script>
-    <script src="../../scripts/js/insert_devamsizlik.js"></script>
+    <script src="../../scripts/js/sinav_listesi/page_sinav_listesi_yakin.js"></script>
+
+
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -284,14 +285,16 @@
                 <!-- Info boxes -->
                 <h5>Ögrenci Seç</h5>
                 <select id="selectNumber"> </select><br />
-                <table id="location" border='1'>
+                <p id="demo"></p>
+                <table class="table table-bordered" id="location">
                     <tr>
+                        <th>Sınav Tur Adı</th>
+                        <th>Sınav Kodu </th>
                         <th>Tarih</th>
-                        <th>Gün </th>
-                        <th>Devamsızlık Durumu</th>
+                        <th>Açıklama</th>
+                        <th>Bitiş Tarihi</th>
                     </tr>
                 </table>
-
             </section>
             <!-- /.content -->
         </div>
